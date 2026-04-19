@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivecome Academy</title>
+
+
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/details.css" />
+  </head>
+
+
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="loogo">
+          <img
+            src="./imges/logiImage.png"
+            alt="not found Logo Image"
+            width="50px"
+            height="50px"
+            id="logoimg"
+          />
+          <h2 id="logo">Ivecom Academy</h2>
+        </div>
+
+        <div class="nav-links1">
+          <a href="./index.html">Home</a>
+          <a href="./about.html">About</a>
+           <a href="./cart.html" class="counte">Cart
+            <span class="counter"> 0 </span>
+          </a>
+        </div>
+
+        <div class="nav-links2" id ="local">
+          <a href="./login.html" id="btn" class="guest">Login</a>
+          <a href="./register.html" id="btn2" class="guest">Register</a>
+          <div class="nav-links2 user" id="nav-user" >
+            <span class="user" id="user-name"></span>
+          <img src="./imges/img_avatar.png" id="profile-img" class="user" alt="profile pic">
+          </div>
+          <!-- <span class="user"><i class="fa-solid fa-user" id="profile-img" ></i></span> -->
+          <button class="user" id="logout-btn">Logout</button>
+        </div>
+      </nav>
+    </header>
+
+
+
+    <div class="DT">
+      <div class="DT-SideBar">
+        <ul class="sidebar-menu">
+          <li><a href="#outDT-MainContent">Main details</a></li>
+          <li><a href="#Price">Duration&Price</a></li>
+          <li><a href="#CRCard-WLCard">What will learn</a></li>
+          <li><a href="#CRCard-WLCard">Cuirculums</a></li>
+          <li><a href="#mentorCard">Mentor details</a></li>
+        </ul>
+      </div>
+
+     
+                       
+      <div  class="DT-MainContent" id="outDT-MainContent"></div>
+      
+      </div>
+      
+      <div class="course-info">
+        <!-- ------- card info ------ -->
+        <div>
+          <p id="duration"></p>
+        </div>
+        <div>
+          <p id="Price"></p>
+        </div>
+        <div>
+          <p id="mentor"></p>
+        </div>
+      </div>
+
+       
+  
+      <!-- ----------CR-WL-------- -->
+      <div class="CRCard-WLCard" id="CRCard-WLCard">
+        <div class="Learn-Card">
+          <h3>What you will learn</h3>
+          <ul>
+            <li>
+              <h2>Digital Foundation</h2>
+              <h5>
+                Understand the core principles of binary logic and electronic
+                signals.
+              </h5>
+            </li>
+            <li>
+              <h2>Kinematic Chains</h2>
+              <h5>
+                Designing movement systems that mirror biological elegance.
+              </h5>
+            </li>
+            <li>
+              <h2>Sensory Perception</h2>
+              <h5>
+                How machines interpret the physical world through advanced
+                sensors.
+              </h5>
+            </li>
+            <li>
+              <h2>Neural Interfacing</h2>
+              <h5>
+                Connecting code to hardware for seamless, real-time response.
+              </h5>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Curriculum-Card">
+          <h3>Curriculum</h3>
+          <ul>
+            <li class="">
+              <strong>Logic Gates</strong><br />
+              4 Lessons • 2h 30m
+            </li>
+            <li class="sensory_input">
+              <strong>Sensory Inputs</strong><br />
+              3 Lessons • 1h 45m
+              <ul class="sub-list">
+                <li>Types of Modern Sensors</li>
+                <li>Data Filtering & Noise</li>
+                <li>Project: Environmental Mapping</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Building the First Bot</strong><br />
+              6 Lessons • 4h 10m
+            </li>
+          </ul>
+          <a href="#" class="view-full">View Full Curriculum (12 Modules)</a>
+        </div>
+      </div>
+
+      <!-- -------------------mentor card---------- -->
+      <div id="mentorCard"></div>
+   
+
+    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <footer>
+      <div class="footerd1">
+        <div class="container">
+          <div class="col">
+            <h2 id="logo2">Ivecom Academy</h2>
+            <p class="word">
+              Nurturing young minds through code <br />
+              and digital craftsmanship since 2024.
+            </p>
+          </div>
+
+          <div class="col">
+            <p class="word">Programs</p>
+            <p class="word">Courses</p>
+            <p class="word">Summer Camps</p>
+            <p class="word">1:1 Mentors</p>
+            <p class="word">Certifications</p>
+          </div>
+
+          <div class="col">
+            <p class="word">Company</p>
+            <p class="word">Pricing</p>
+            <p class="word">FAQ</p>
+            <p class="word">Contact Us</p>
+            <p class="word">Mentors</p>
+          </div>
+
+          <div class="col">
+            <p class="word">Privacy Policy</p>
+            <p class="word">Terms of Service</p>
+            <p class="word">Cookie Policy</p>
+            <p class="word">Accessibility</p>
+          </div>
+        </div>
+
+        <div class="imglogo2">
+          <img src="./imges\Vector.png" alt="not1" />
+          <img src="./imges\facebook.png" alt="not" />
+          <img src="./imges\dribbble.png" alt="not2" />
+          <img src="./imges\nstagram.png" alt="not3" />
+          <img src="./imges\behance.png" alt="not4" />
+
+          <p class="copywrite">Copyright &copy; 2026 Course</p>
+        </div>
+      </div>
+    </footer>
+     
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+    <script src="./script.js"></script>
+    <script src="./details.js"></script>
+  </body>
+</html>
