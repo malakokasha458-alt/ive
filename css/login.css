@@ -1,0 +1,30 @@
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;            
+    margin-bottom: 10px;           
+    font-size: 13px;  
+    margin: 0 71px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #1D242B;
+}
+
+.remember-me input {
+    margin-right: 8px; 
+    accent-color: #0077C0; 
+    width: 14px; 
+    height: 14px;
+}
+
+.forgot-pass {
+    color: #0077C0;
+    text-decoration: none; 
+    font-weight: 500;
+}
+

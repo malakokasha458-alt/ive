@@ -2,34 +2,30 @@
   <head>
     <title>Ivecome Academy</title>
 
-    
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;700;900&display=swap"
-    rel="stylesheet"
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
     />
-    
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/style.css">
 
-   <link rel="icon" href="">
-
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
 
   <body>
     <!-- /////////////////////////////////////////////    Baaaaarrrrrrrrrrr        //////////////////////////////////////////////////// -->
-  
 
     <header>
       <nav class="navbar">
         <div class="loogo">
           <img
-            src="./imges/logiImage.png"
+            src="../assets/images/logiImage.png"
             alt="not found Logo Image"
             width="50px"
             height="50px"
@@ -38,24 +34,27 @@
           <h2 id="logo">Ivecom Academy</h2>
         </div>
 
-
-
         <div class="nav-links1">
           <a href="./index.html" id="home-link">Home</a>
           <a href="./about.html" id="about-link">About</a>
-          <a href="./cart.html" id="cart-link" class="counte">Cart
+          <a href="./cart.html" id="cart-link" class="counte"
+            >Cart
             <span class="counter"> 0 </span>
           </a>
         </div>
 
-
-
-        <div class="nav-links2" id ="local">
+        <div class="nav-links2" id="local">
           <a href="./login.html" id="btn" class="guest">Login</a>
           <a href="./register.html" id="btn2" class="guest">Register</a>
-          <div class="nav-links2 user" id="nav-user" >
+          <div class="nav-links2 user" id="nav-user">
             <span class="user" id="user-name"></span>
-          <a href="profile.html"><img src="./imges/img_avatar.png" id="profile-img" class="user" alt="profile pic"></a>
+            <a href="profile.html"
+              ><img
+                src="../assets/images/img_avatar.png"
+                id="profile-img"
+                class="user"
+                alt="profile pic"
+            /></a>
           </div>
           <!-- <span class="user"><i class="fa-solid fa-user" id="profile-img" ></i></span> -->
           <button class="user" id="logout-btn">Logout</button>
@@ -72,12 +71,11 @@
           <button id="searchBtn">Search</button>
         </div> -->
 
-
         <div id="results"></div>
 
         <div class="backGround">
           <img
-            src="./imges/futuristic-robot-artificial-intelligence-huminoid-ai-programming-coding_31965-57549.avif"
+            src="../assets/images/futuristic-robot-artificial-intelligence-huminoid-ai-programming-coding_31965-57549.avif"
             alt="not found HeaderImage"
           />
 
@@ -137,15 +135,12 @@
 
       <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
       <section>
-
-        
         <div class="hmmain">
+          <div class="search">
+            <input type="text" id="searchInput" placeholder="search here..." />
+            <button id="searchBtn">Search</button>
+          </div>
 
-        <div class="search">
-          <input type="text" id="searchInput" placeholder="search here..." />
-          <button id="searchBtn">Search</button>
-        </div>
-        
           <h2 id="hmTitle">From Learning to Achievement</h2>
           <p id="hmprag">
             Carefully curated curriculum designed to transition from block-based
@@ -511,43 +506,67 @@
           </div>
 
           <div class="col">
-            <p class="word">Programs</p>
-            <p class="word">Courses</p>
-            <p class="word">Summer Camps</p>
-            <p class="word">1:1 Mentors</p>
-            <p class="word">Certifications</p>
+            <a class="word prevent-default" href="#">Programs</a>
+            <a class="word prevent-default" href="#">Courses</a>
+            <a class="word prevent-default" href="#">Summer Camps</a>
+            <a class="word prevent-default" href="#">1:1 Mentors</a>
+            <a class="word prevent-default" href="#">Certifications</a>
           </div>
 
           <div class="col">
-            <p class="word">Company</p>
-            <p class="word">Pricing</p>
-            <p class="word">FAQ</p>
-            <p class="word">Contact Us</p>
-            <p class="word">Mentors</p>
+            <a class="word prevent-default" href="#">Company</a>
+            <a class="word prevent-default" href="#">Pricing</a>
+            <a class="word prevent-default" href="#">FAQ</a>
+            <a class="word prevent-default" href="#">Contact Us</a>
+            <a class="word prevent-default" href="#">Mentors</a>
           </div>
 
           <div class="col">
-            <p class="word">Privacy Policy</p>
-            <p class="word">Terms of Service</p>
-            <p class="word">Cookie Policy</p>
-            <p class="word">Accessibility</p>
+            <a class="word prevent-default" href="#">Privacy Policy</a>
+            <a class="word prevent-default" href="#">Terms of Service</a>
+            <a class="word prevent-default" href="#">Cookie Policy</a>
+            <a class="word prevent-default" href="#">Accessibility</a>
           </div>
         </div>
 
-          <div class="imglogo2">
-         <img src="./imges\Vector.png" alt="not1">
-         <img src="./imges\facebook.png" alt="not">
-         <img src="./imges\dribbble.png" alt="not2">
-         <img src="./imges\nstagram.png" alt="not3">
-         <img src="./imges\behance.png" alt="not4">
+        <div class="imglogo2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/company/ivecom/"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/Ivecom.Qena/"
+            ><i class="fa-brands fa-facebook"></i
+          ></a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.youtube.com/@ivecomegypt6678"
+            ><i class="fa-brands fa-youtube"></i
+          ></a>
+          <a class="prevent-default" href=""
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="prevent-default" href=""
+            ><i class="fa-brands fa-square-behance"></i
+          ></a>
 
-         <p class="copywrite">Copyright &copy; 2026 Course</p>
-
-       </div>
-
+          <p class="copywrite">Copyright &copy; 2026 Course</p>
+        </div>
       </div>
     </footer>
 
+    <script>
+      document.querySelectorAll(".prevent-default").forEach((link) => {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+        });
+      });
+    </script>
     <script src="script.js"></script>
     <script src="index.js"></script>
   </body>

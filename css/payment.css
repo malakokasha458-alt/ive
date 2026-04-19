@@ -1,0 +1,153 @@
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family:  "Poppins","Montserrat", sans-serif;
+}
+body{
+  background-image: url("../imges/WhatsApp Image 2026-04-12 at 8.38.10 PM.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+
+}
+/* #register-parent{
+  width: 100%;
+} */
+
+/* .register-card{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 900px;
+  height: 90%;
+  border-radius: 30px;  
+  overflow: hidden;    
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(1px); 
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px;
+  box-sizing: border-box;
+} */
+
+.register-text{
+  margin-bottom: 15px;
+}
+
+.right-side {
+  width: 50%;
+  /* padding: 100px;             */
+  display: flex;
+  flex-direction: column;    
+  justify-content: center; 
+  /* align-items: center; */
+  text-align: center;
+  margin: 0 auto;
+  /* margin-left: 100px; */
+
+}
+
+/* ------------------payment */
+
+.payment-form {
+    border-radius: 18px;
+    border-radius: 10px;
+    width: 900px;
+    height: 500px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition:3s;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px); 
+
+}
+
+.payment-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #1D242B;
+  font-size: 30px;
+}
+
+.payinput-group {
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.payinput-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+.payinput-group input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2); 
+  color: #0077c0;
+  font-size: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+
+}
+
+.payicons {
+  position: absolute;
+  right: 10px;
+  top: 32px;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.payicons img {
+  width: 30px;
+  height: auto;
+  
+  border-radius: 4px;
+  background: #C7EEFF;
+  padding: 2px;
+}
+
+.patinput-group{
+    padding-bottom: 30px;
+}
+
+.paybutton {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(1px); 
+  border: none;
+  border-radius: 5px;
+  color: #1D242B;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.paybutton:hover {
+  background: #fafafa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
