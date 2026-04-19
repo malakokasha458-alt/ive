@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="loogo">
+          <img
+            src="./imges/logiImage.png"
+            alt="not found Logo Image"
+            width="50px"
+            height="50px"
+            id="logoimg"
+          />
+          <h2 id="logo">Ivecom Academy</h2>
+        </div>
+
+        <div class="nav-links1">
+          <a href="./index.html" id="home-link">Home</a>
+          <a href="./about.html" id="about-link">About</a>
+           <a href="./cart.html" id="cart-link" class="counte">Cart
+            <span class="counter"> 0 </span>
+          </a>
+        </div>
+
+        <div class="nav-links2" id="local">
+          <a href="./login.html" id="btn" class="guest">Login</a>
+          <a href="./register.html" id="btn2" class="guest">Register</a>
+          <div class="nav-links2 user" id="nav-user">
+            <span class="user" id="user-name"></span>
+            <a href="profile.html"
+              ><img
+                src="./imges/img_avatar.png"
+                id="profile-img"
+                class="user"
+                alt="profile pic"
+            /></a>
+          </div>
+          <!-- <span class="user"><i class="fa-solid fa-user" id="profile-img" ></i></span> -->
+          <button class="user" id="logout-btn">Logout</button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="cart-text">
+      <h1>From Imagination to Inovnation</h1>
+    <br />
+    <p>
+      Nurture these concepts into skills within your digital greenhouse.
+    </p>
+    </div>
+    <div class="card-container">
+      
+        <div class="card-main">
+          <div class="border">
+          <div class="cart-Container"></div>
+
+          <!-- <div class="card-img">
+            <div class="img-card">
+              <img src="./img2.jpg" alt="python" />
+            </div>
+            
+            <div class="info">
+            <h6> Beginner</h6>
+            <h5>Python for Young Creators</h5>
+            <p>Mentored by Sarah Chen • 12 Week</p>
+            </div>
+
+            <div class="price">
+              <div class="trash-btn">
+              <p><i class="fa-solid fa-trash-can" onclick="deleteCourse(this)"></i></p>
+              </div>
+              <span>$299.00</span>
+            </div>
+
+          </div>
+
+
+
+          <div class="card-img">
+            <div class="img-card">
+              <img src="./img2.jpg" alt="python" />
+            </div>
+            
+            <div class="info">
+            <h6> Beginner</h6>
+            <h5>Python for Young Creators</h5>
+            <p>Mentored by Sarah Chen • 12 Week</p> 
+            </div>
+
+            <div class="price">
+              <div class="trash-btn">
+              <p><i class="fa-solid fa-trash-can" onclick="deleteCourse(this)"></i></p>
+              </div>
+              <span>$299.00</span>
+            </div>
+          </div> -->
+          </div>
+        </div>
+      
+      <div class="Summary-card">
+        <h3>Order Summary</h3>
+
+        <div class="cont">
+          <div class="subtotal">
+            <span class="column">subtotal</span>
+            <span class="column">processing fee</span>
+            <span class="column">ivecom~discount</span>
+          </div>
+          <div class="subtotal">
+            <span id="subtotal-val" style="color: #1d242b" class="column"
+              >$0.00</span
+            >
+            <span id="fee-val" style="color: #1d242b" class="column"
+              >$0.00</span
+            >
+            <span id="discount-val" style="color: #1d242b" class="column"
+              >-$0.00</span
+            >
+          </div>
+        </div>
+        <br />
+
+        <hr />
+        <br />
+        <br />
+
+        <div class="total-col">
+          <div class="total">
+            <span class="column">total</span>
+            <strong id="total-val" class="column">$736.00</strong>
+            <button id="checkout-btn" style="background-color: #0077c0" type="button" >
+              Proceed to Checkout
+            </button>
+          </div>
+
+          <p class="text">
+            <i class="fa-solid fa-unlock"></i>SECURE ENCRYPTED CHECKOUT
+          </p>
+
+          <!-- //-----------------------------------------------------------------------------------------// -->
+          <div class="code">
+            <h5>PROMO CODE</h5>
+            <div class="code-col">
+              <input  id ="inp" type="text" name="text" placeholder="GROWTH2024" />
+              <button>Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <!-- <div class="card-add">
+          <h4>Add a Growth Pack?</h4>
+          <p>Include 1:1 weekly mentor sessions for 15% off.</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>  -->
+
+
+
+    <!-- ----------------------------------------payment -->
+
+
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+    <footer>
+      <div class="footerd1">
+        <div class="container">
+          <div class="col">
+            <h2 id="logo2">Ivecom Academy</h2>
+            <p class="word">
+              Nurturing young minds through code <br />
+              and digital craftsmanship since 2024.
+            </p>
+          </div>
+
+          <div class="col">
+            <p class="word">Programs</p>
+            <p class="word">Courses</p>
+            <p class="word">Summer Camps</p>
+            <p class="word">1:1 Mentors</p>
+            <p class="word">Certifications</p>
+          </div>
+
+          <div class="col">
+            <p class="word">Company</p>
+            <p class="word">Pricing</p>
+            <p class="word">FAQ</p>
+            <p class="word">Contact Us</p>
+            <p class="word">Mentors</p>
+          </div>
+
+          <div class="col">
+            <p class="word">Privacy Policy</p>
+            <p class="word">Terms of Service</p>
+            <p class="word">Cookie Policy</p>
+            <p class="word">Accessibility</p>
+          </div>
+        </div>
+
+        <div class="imglogo2">
+          <img src="./imges\Vector.png" alt="not1" />
+          <img src="./imges\facebook.png" alt="not" />
+          <img src="./imges\dribbble.png" alt="not2" />
+          <img src="./imges\nstagram.png" alt="not3" />
+          <img src="./imges\behance.png" alt="not4" />
+
+          <p class="copywrite">Copyright &copy; 2026 Course</p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="index.js"></script>
+    <script src="script.js"></script>
+    <script src="cart.js"></script>
+
+    
+  </body>
+</html>
