@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Create your Ivecom Academy account">
+    <title>Register | Ivecom Academy</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .password-strength {
+            margin-top: 8px;
+        }
+        .strength-bar {
+            height: 4px;
+            background: var(--border-color);
+            border-radius: 2px;
+            margin-top: 5px;
+            transition: all var(--transition-fast);
+        }
+        .strength-text {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+        .strength-weak { background: #dc3545; width: 25%; }
+        .strength-fair { background: #ffc107; width: 50%; }
+        .strength-good { background: #17a2b8; width: 75%; }
+        .strength-strong { background: #28a745; width: 100%; }
+        .terms-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+        .terms-checkbox input {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: var(--primary-color);
+        }
+        .terms-checkbox span {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        .terms-checkbox a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .terms-checkbox a:hover {
+            text-decoration: underline;
+        }
+        .auth-container {
+            min-height: calc(100vh - 200px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-white) 100%);
+        }
+        .auth-card {
+            display: flex;
+            background: white;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            max-width: 1000px;
+            width: 100%;
+        }
+        .auth-image {
+            flex: 1;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+        }
+        .auth-image img {
+            width: 100%;
+            max-width: 280px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        .auth-form {
+            flex: 1;
+            padding: 50px;
+        }
+        .auth-form h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .auth-card {
+                flex-direction: column;
+                max-width: 450px;
+            }
+            .auth-form {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo">
+                    <img src="./imges/logiImage.png" alt="Ivecom Academy Logo">
+                    <h2>Ivecom Academy</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="cart.html" class="cart-link">Cart</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-image">
+                    <img src="./imges/bg.jpg" alt="Join Us">
+                </div>
+                <div class="auth-form">
+                    <h1>Create Account 🚀</h1>
+                    <p class="subtitle">Join Ivecom Academy and start learning today</p>
+                    
+                    <form id="register-form">
+                        <div class="form-group">
+                            <label class="form-label">Full Name</label>
+                            <input type="text" id="register-name" class="form-input" placeholder="Enter your full name" required autocomplete="name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" id="register-email" class="form-input" placeholder="Enter your email" required autocomplete="email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Password</label>
+                            <input type="password" id="register-password" class="form-input" placeholder="Create a password" required autocomplete="new-password">
+                            <div class="password-strength">
+                                <div class="strength-bar" id="strength-bar"></div>
+                                <div class="strength-text" id="strength-text"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Confirm Password</label>
+                            <input type="password" id="confirm-password" class="form-input" placeholder="Confirm your password" required autocomplete="off">
+                        </div>
+                        
+                        <label class="terms-checkbox">
+                            <input type="checkbox" id="terms-checkbox">
+                            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+                        </label>
+                        
+                        <button type="submit" class="btn btn-primary btn-block" style="width: 100%;">
+                            <i class="fas fa-user-plus"></i> Create Account
+                        </button>
+                    </form>
+                    
+                    <div class="auth-footer">
+                        <p>Already have an account? <a href="login.html">Sign In</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Ivecom Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>

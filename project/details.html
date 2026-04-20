@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Course details - Ivecom Academy">
+    <title>Course Details | Ivecom Academy</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo">
+                    <img src="./imges/logiImage.png" alt="Ivecom Academy Logo">
+                    <h2>Ivecom Academy</h2>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="cart.html" class="cart-link">
+                        Cart
+                        <span class="cart-counter" id="cart-counter">0</span>
+                    </a>
+                </div>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login" id="login-btn">Login</a>
+                    <a href="register.html" class="btn-register" id="register-btn">Register</a>
+                    <div class="user-profile" id="user-profile" style="display: none;">
+                        <a href="profile.html" class="user-name" id="user-name"></a>
+                        <a href="profile.html">
+                            <img src="./imges/img_avatar.png" alt="Profile" class="user-avatar">
+                        </a>
+                    </div>
+                    <button class="btn-logout" id="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="details-layout">
+                <!-- Sidebar -->
+                <aside class="details-sidebar">
+                    <div class="sidebar-menu">
+                        <ul>
+                            <li><a href="#course-main">📖 Main Details</a></li>
+                            <li><a href="#course-info">⏱ Duration & Price</a></li>
+                            <li><a href="#what-learn">🎯 What You'll Learn</a></li>
+                            <li><a href="#curriculum">📚 Curriculum</a></li>
+                            <li><a href="#mentor">👨‍🏫 Mentor</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <div class="details-main">
+                    <div id="course-main"></div>
+                    
+                    <div id="course-info" class="info-cards"></div>
+                    
+                    <div id="what-learn" class="what-learn-section"></div>
+                    
+                    <div id="curriculum" class="curriculum-section"></div>
+                    
+                    <div id="mentor" class="mentor-section"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Ivecom Academy</h2>
+                    <p>Nurturing young minds through code and digital craftsmanship since 2024.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Summer Camps</a></li>
+                        <li><a href="#">1:1 Mentors</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Mentors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/ivecom/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/Ivecom.Qena/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@ivecomegypt6678" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Ivecom Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/details.js"></script>
+</body>
+</html>

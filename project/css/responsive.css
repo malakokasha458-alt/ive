@@ -1,0 +1,374 @@
+/* ============================================
+   RESPONSIVE.CSS - Complete Responsive Design
+   ============================================ */
+
+/* Tablet Landscape (1024px - 1199px) */
+@media screen and (max-width: 1199px) {
+    :root {
+        --font-size-5xl: 48px;
+        --font-size-4xl: 36px;
+        --font-size-3xl: 28px;
+    }
+    
+    .container {
+        max-width: 960px;
+    }
+    
+    .courses-grid {
+        max-width: 800px;
+    }
+}
+
+/* Tablet Portrait (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+    :root {
+        --font-size-5xl: 40px;
+        --font-size-4xl: 32px;
+    }
+    
+    .navbar-container {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .auth-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .details-layout {
+        flex-direction: column;
+    }
+    
+    .details-sidebar {
+        width: 100%;
+    }
+    
+    .sidebar-menu {
+        position: static;
+    }
+    
+    .sidebar-menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+        justify-content: center;
+    }
+    
+    .sidebar-menu ul li {
+        margin-bottom: 0;
+    }
+    
+    .cart-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cart-summary {
+        position: static;
+    }
+    
+    .profile-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-sidebar {
+        position: static;
+    }
+    
+    .profile-sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--spacing-sm);
+    }
+    
+    .auth-card {
+        flex-direction: column;
+        max-width: 500px;
+    }
+    
+    .auth-image {
+        padding: var(--spacing-xl);
+    }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media screen and (max-width: 767px) {
+    :root {
+        --font-size-5xl: 32px;
+        --font-size-4xl: 28px;
+        --font-size-3xl: 24px;
+        --font-size-2xl: 20px;
+        --spacing-2xl: 32px;
+        --spacing-3xl: 48px;
+    }
+    
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero p {
+        font-size: var(--font-size-md);
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+    
+    .course-image {
+        height: 200px;
+    }
+    
+    .course-info {
+        padding: var(--spacing-md);
+    }
+    
+    .course-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+    }
+    
+    .course-details-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .info-cards {
+        flex-direction: column;
+    }
+    
+    .mentor-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .cart-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .activity-item {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        text-align: center;
+    }
+    
+    .activity-info {
+        flex-direction: column;
+    }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media screen and (max-width: 575px) {
+    :root {
+        --font-size-5xl: 28px;
+        --font-size-4xl: 24px;
+        --font-size-3xl: 22px;
+        --font-size-xl: 18px;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links {
+        gap: var(--spacing-md);
+    }
+    
+    .nav-links a {
+        font-size: var(--font-size-sm);
+    }
+    
+    .btn-login,
+    .btn-register,
+    .btn-logout {
+        padding: 6px 12px;
+        font-size: var(--font-size-sm);
+    }
+    
+    .user-name {
+        display: none;
+    }
+    
+    .course-image {
+        height: 180px;
+    }
+    
+    .course-meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .auth-form {
+        padding: var(--spacing-xl);
+    }
+    
+    .cart-item-image {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+/* Small Mobile (up to 380px) */
+@media screen and (max-width: 380px) {
+    .course-title {
+        font-size: var(--font-size-md);
+    }
+    
+    .course-description {
+        font-size: var(--font-size-sm);
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Landscape Orientation Fix */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 20px 0;
+    }
+    
+    .features {
+        padding: var(--spacing-xl) 0;
+    }
+    
+    .courses-section {
+        padding: var(--spacing-xl) 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .navbar,
+    .footer,
+    .search-bar,
+    .details-sidebar,
+    .cart-summary,
+    .profile-sidebar,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        background: white;
+    }
+    
+    .course-card,
+    .details-main {
+        break-inside: avoid;
+    }
+}
+
+/* ============================================
+   PAYMENT PAGE RESPONSIVE
+   ============================================ */
+
+@media screen and (max-width: 768px) {
+    .payment-card {
+        margin: 20px;
+        padding: 25px;
+    }
+    
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .order-item-price {
+        align-self: flex-end;
+    }
+    
+    .payment-methods {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .payment-method {
+        width: 70px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .payment-card {
+        margin: 15px;
+        padding: 20px;
+    }
+    
+    .payment-header h2 {
+        font-size: 24px;
+    }
+    
+    .payment-method {
+        width: 60px;
+        padding: 8px;
+    }
+    
+    .payment-method img {
+        max-height: 30px;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .pay-btn {
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+/* Landscape mode for payment */
+@media screen and (max-height: 600px) and (orientation: landscape) {
+    .payment-container {
+        padding: 20px;
+    }
+    
+    .payment-card {
+        padding: 20px;
+    }
+    
+    .order-summary {
+        margin: 20px 0;
+    }
+}
