@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Secure payment checkout - Ivecom Academy">
+    <title>Checkout | Ivecom Academy</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        .payment-container {
+            min-height: calc(100vh - 300px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .payment-card {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+        }
+        .payment-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .payment-header h2 {
+            margin-bottom: 10px;
+        }
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        .payment-method {
+            width: 80px;
+            padding: 10px;
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            text-align: center;
+        }
+        .payment-method:hover,
+        .payment-method.active {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+        }
+        .payment-method img {
+            width: 100%;
+            height: auto;
+            max-height: 40px;
+            object-fit: contain;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .order-summary {
+            background: var(--bg-gray);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        .order-summary h4 {
+            margin-bottom: 15px;
+        }
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .order-item:last-child {
+            border-bottom: none;
+        }
+        .pay-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+        .pay-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .secure-badge {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-light);
+            font-size: 12px;
+        }
+        @media (max-width: 576px) {
+            .payment-card {
+                padding: 25px;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo">
+                    <img src="./imges/logiImage.png" alt="Ivecom Academy Logo">
+                    <h2>Ivecom Academy</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="cart.html" class="cart-link">Cart</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="payment-container">
+            <div class="payment-card">
+                <div class="payment-header">
+                    <h2>Complete Your Purchase</h2>
+                    <p>Secure payment gateway</p>
+                </div>
+
+                <div class="payment-methods">
+                    <div class="payment-method" data-method="card" onclick="Payment.selectMethod('card')">
+                        <img src="./imges/visa.jpeg" alt="Visa">
+                    </div>
+                    <div class="payment-method" data-method="card" onclick="Payment.selectMethod('card')">
+                        <img src="./imges/round.jpeg" alt="Mastercard">
+                    </div>
+                    <div class="payment-method" data-method="wallet" onclick="Payment.selectMethod('wallet')">
+                        <img src="./imges/vodafone.jpeg" alt="Vodafone Cash">
+                    </div>
+                </div>
+
+                <form id="payment-form">
+                    <div class="form-group">
+                        <label class="form-label">Card Number / Wallet Number</label>
+                        <input type="text" id="payment-number" class="form-input" placeholder="Enter card number" autocomplete="off">
+                    </div>
+
+                    <div id="card-fields">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Expiration Date</label>
+                                <input type="text" class="form-input" id="expiry-date" placeholder="MM/YY" autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">CVV / CVC</label>
+                                <input type="text" class="form-input" id="cvv" placeholder="CVV" autocomplete="off" maxlength="4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Cardholder Name</label>
+                            <input type="text" class="form-input" id="cardholder-name" placeholder="Name on card" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div id="wallet-fields" style="display: none;">
+                        <div class="form-group">
+                            <label class="form-label">Mobile Number</label>
+                            <input type="tel" class="form-input" id="mobile-number" placeholder="Enter mobile number" autocomplete="off">
+                        </div>
+                    </div>
+                </form>
+
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    <div id="order-items"></div>
+                    <div class="order-item" style="font-weight: bold; margin-top: 10px;">
+                        <span>Total</span>
+                        <span id="payment-total">$0.00</span>
+                    </div>
+                </div>
+
+                <button class="pay-btn" onclick="Payment.processPayment()">
+                    <i class="fas fa-lock"></i> Pay Now
+                </button>
+                <div class="secure-badge">
+                    <i class="fas fa-shield-alt"></i> Secure encrypted transaction
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>

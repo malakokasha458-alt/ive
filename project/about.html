@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Learn about Ivecom Academy - Our mission, team, and values">
+    <title>About Us | Ivecom Academy</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* About Page Specific Styles */
+        .hero-about {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--bg-white) 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+        .hero-about h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero-about h1 span {
+            color: var(--primary-color);
+            font-style: italic;
+        }
+        .hero-about p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+            color: var(--text-light);
+        }
+        .mission-section {
+            padding: 80px 0;
+            background: white;
+        }
+        .mission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .mission-content h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .mission-content h2 span {
+            color: var(--primary-color);
+        }
+        .mission-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .mission-image {
+            /* background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); */
+            border-radius: 50px;
+            padding: 40px;
+            text-align: center;
+            animation: float 3s ease-in-out infinite;
+        }
+        .mission-image i {
+            font-size: 120px;
+            color: white;
+        }
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        .stat-label {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .team-section {
+            padding: 80px 0;
+            background: var(--bg-gray);
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+        .section-title p {
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+        .team-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+        .team-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+        .team-info {
+            padding: 25px;
+        }
+        .team-info h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        .team-bio {
+            color: var(--text-light);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        .values-section {
+            padding: 80px 0;
+            background: white;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        .value-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: var(--bg-gray);
+            border-radius: 20px;
+            transition: all var(--transition-normal);
+        }
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+        }
+        .value-icon i {
+            font-size: 40px;
+            color: var(--primary-color);
+        }
+        .value-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            padding: 80px 0;
+            text-align: center;
+            color: white;
+        }
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        .cta-btn {
+            background: white;
+            color: var(--primary-color);
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all var(--transition-normal);
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+            color: var(--primary-dark);
+        }
+        @media (max-width: 768px) {
+            .mission-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+            .hero-about h1 {
+                font-size: 36px;
+            }
+            .section-title h2 {
+                font-size: 30px;
+            }
+            .cta-section h2 {
+                font-size: 28px;
+            }
+        }
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .hero-about {
+                padding: 50px 0;
+            }
+            .hero-about h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo">
+                    <img src="./imges/logiImage.png" alt="Ivecom Academy Logo">
+                    <h2>Ivecom Academy</h2>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html" class="active">About</a>
+                    <a href="cart.html" class="cart-link">
+                        Cart
+                        <span class="cart-counter" id="cart-counter">0</span>
+                    </a>
+                </div>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login" id="login-btn">Login</a>
+                    <a href="register.html" class="btn-register" id="register-btn">Register</a>
+                    <div class="user-profile" id="user-profile" style="display: none;">
+                        <a href="profile.html" class="user-name" id="user-name"></a>
+                        <a href="profile.html">
+                            <img src="./imges/img_avatar.png" alt="Profile" class="user-avatar">
+                        </a>
+                    </div>
+                    <button class="btn-logout" id="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-about">
+            <div class="container">
+                <h1>We build learning experiences <br><span>that feel effortless</span></h1>
+                <p>Ivecom is an online learning platform designed to help students grow with clarity and confidence. We simplify the learning journey, reduce confusion, and make gaining new skills smoother and more enjoyable.</p>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-content">
+                        <h2>Born from a passion for <span>learning</span>, built with purpose</h2>
+                        <p>We started Ivecom to make education simpler, more accessible, and truly impactful. After seeing how complicated and scattered online learning could be, we believed there had to be a better way — so we created it.</p>
+                        <p>Today, we're a growing team dedicated to empowering learners everywhere. We focus on clarity, quality content, and real-world skills — helping our students turn knowledge into confidence, and ideas into action.</p>
+                    </div>
+                    <div class="mission-image">
+                        <img class="fas fa-graduation-cap" src="./imges/ivecom.jpeg" alt="">
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">6+</div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">14k+</div>
+                        <div class="stat-label">Happy Students</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Satisfaction Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Expert Mentors</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Meet Our Expert Team</h2>
+                    <p>Passionate educators and industry professionals dedicated to your success</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="./imges/mahmoud.jpeg" alt="Mahmoud" class="team-image">
+                        <div class="team-info">
+                            <h3>Mahmoud</h3>
+                            <div class="team-role">Senior Full-Stack Developer</div>
+                            <p class="team-bio">10+ years of experience in web development. Passionate about teaching and mentoring the next generation of developers.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="./imges/sara.jpeg" alt="Sara" class="team-image">
+                        <div class="team-info">
+                            <h3>Sara</h3>
+                            <div class="team-role">Lead UI/UX Designer</div>
+                            <p class="team-bio">Award-winning designer with a focus on creating intuitive and beautiful learning experiences.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <img src="./imges/malak.jpeg" alt="Malak" class="team-image">
+                        <div class="team-info">
+                            <h3>Malak</h3>
+                            <div class="team-role">AI & Data Science Expert</div>
+                            <p class="team-bio">PhD in Machine Learning, helping students understand complex concepts through practical examples.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Choose Ivecom?</h2>
+                    <p>We're committed to providing the best learning experience possible</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Project-Based Learning</h3>
+                        <p>Don't just watch videos. Build real-world applications that stand out in your professional portfolio.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Modern Technology Stack</h3>
+                        <p>We teach the latest technologies like React, Node.js, and Python, ensuring your skills are never outdated.</p>
+                    </div>
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>Career Support</h3>
+                        <p>Get access to resume workshops, mock interviews, and our exclusive network of hiring partners.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2>Ready to Start Your Journey?</h2>
+                <p>Join thousands of students who have transformed their careers with Ivecom Academy</p>
+                <a href="register.html" class="cta-btn">Get Started Today →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Ivecom Academy</h2>
+                    <p>Nurturing young minds through code and digital craftsmanship since 2024.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Summer Camps</a></li>
+                        <li><a href="#">1:1 Mentors</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/ivecom/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/Ivecom.Qena/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@ivecomegypt6678" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Ivecom Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

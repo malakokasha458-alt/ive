@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="Ivecom Academy - Learn coding and digital skills with expert mentors">
+    <title>Ivecom Academy | Learn Coding Online</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="container navbar-container">
+                <div class="logo">
+                    <img src="./imges/logiImage.png" alt="Ivecom Academy Logo">
+                    <h2>Ivecom Academy</h2>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="cart.html" class="cart-link">
+                        Cart
+                        <span class="cart-counter" id="cart-counter">0</span>
+                    </a>
+                </div>
+                
+                <div class="auth-buttons">
+                    <a href="login.html" class="btn-login" id="login-btn">Login</a>
+                    <a href="register.html" class="btn-register" id="register-btn">Register</a>
+                    <div class="user-profile" id="user-profile" style="display: none;">
+                        <a href="profile.html" class="user-name" id="user-name"></a>
+                        <a href="profile.html">
+                            <img src="./imges/img_avatar.png" alt="Profile" class="user-avatar">
+                        </a>
+                    </div>
+                    <button class="btn-logout" id="logout-btn" style="display: none;">Logout</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">From Imagination to Innovation</span>
+                    <h1>From Imagination to <span>Innovation</span></h1>
+                    <p>Ethereal Mentor combines high-tech precision with organic growth. We don't just teach code; we cultivate digital creators in a premium, high-end environment.</p>
+                    <button class="btn btn-primary" id="contact-btn">Contact Us</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3ePcwpjJ_8XOEkqB8jAvpcVjdczZ-mpIPVg&s" alt="Software Engineering">
+                        </div>
+                        <h3>Software Engineering</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="https://cdn3d.iconscout.com/3d/premium/preview/robot-3d-icon-png-download-7746765.png?f=webp&h=700" alt="Robotics">
+                        </div>
+                        <h3>Robotics & 3D Modeling</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="https://cdn.dribbble.com/userupload/16488304/file/original-9c68bc18a84dfcaa382d612745c57e5c.png?resize=400x0" alt="Branding">
+                        </div>
+                        <h3>Branding</h3>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <img src="https://academyeurope.org/wp-content/uploads/2021/01/273-11.jpg.webp" alt="Business">
+                        </div>
+                        <h3>Business</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section class="courses-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>From Learning to Achievement</h2>
+                    <p>Carefully curated curriculum designed to transition from block-based logic to professional engineering practices in a high-end learning environment.</p>
+                </div>
+                
+                <div class="search-bar">
+                    <input type="text" id="search-input" class="search-input" placeholder="Search courses...">
+                </div>
+                
+                <div id="courses-container" class="courses-grid"></div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>OUR HAPPY CUSTOMERS</h2>
+                </div>
+                <div class="reviews-grid">
+                    <div class="review-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="review-name">Hager M.</h4>
+                        <p class="review-text">The transformation in my daughter's logical thinking is incredible. She's not just playing games; she's building her own world.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="review-name">Sarah M.</h4>
+                        <p class="review-text">The transformation in my daughter's logical thinking is incredible. She's not just playing games; she's building her own world.</p>
+                    </div>
+                    <div class="review-card">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4 class="review-name">Aya M.</h4>
+                        <p class="review-text">The transformation in my daughter's logical thinking is incredible. She's not just playing games; she's building her own world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Ivecom Academy</h2>
+                    <p>Nurturing young minds through code and digital craftsmanship since 2024.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="#">Courses</a></li>
+                        <li><a href="#">Summer Camps</a></li>
+                        <li><a href="#">1:1 Mentors</a></li>
+                        <li><a href="#">Certifications</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Mentors</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                    </ul>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/ivecom/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/Ivecom.Qena/" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.youtube.com/@ivecomegypt6678" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2026 Ivecom Academy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
